@@ -1,0 +1,549 @@
+
+
+
+body p {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+}
+
+.main-header{
+    display: flex;
+}
+
+.logo{
+    border-bottom: 1px solid rgb(44, 43, 43);
+    height: 60px;
+    width: 250px;
+    background: rgb(23, 24, 41) !important;
+ 
+}
+.logo-content img {
+    height: 49px;
+    width: 49px;
+}
+.temp-body{
+    display: flex;
+
+}
+
+.sb-companyName {
+    position: relative;
+    color: white;
+    top: 18px;
+    left: 15px;
+}
+
+.sidebar{
+    width: 250px;
+    height: 70px;
+    color: white;
+    background: rgb(23,24,41) !important;
+}
+
+
+.panel-content {
+    flex-grow: 1; /* Allowing panel to take the remaining space */
+    min-width: 0; /* it can shrink to min 0 width * edit with caution */
+}
+
+.nav-align{
+   display: flex;
+   justify-content:space-between;
+   flex-grow: 1;
+   min-width: 0;
+}
+
+.nav{
+    width:70%;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.nav-profile-name {
+    margin-top: 9px;
+    margin-left: 11px;
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+}
+.nav-profile-email {
+    transform: translate(11px, -10px);
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+}
+
+.nav-profile-btn{
+    transform: translate(11px, -13px);
+}
+
+.nav-profile-logout{
+    transform: translate(15px, -13px);
+}
+.childCard{
+    margin-top: 12px !important;
+    height: 160px !important;
+    background: rgb(23,24,41) !important;
+}
+
+
+.profile-box{
+    margin: 10px 40px 10px 10px;
+    gap: 20px;
+}
+
+.profile-box .notification i{
+   font-weight: 900;
+}
+.notification{
+   transform: translate(12px, 3px); 
+}
+
+.search-box{
+    margin: 10px 0px 10px 10px;
+    width:300px;
+}
+.search{
+    display: flex;
+    gap: 0px;
+}
+
+.accordianCard .profile-img img {
+   height: 40px;
+   width: 40px;
+   border-radius: 100px;
+}
+
+.accordianCard{
+    width: 250px;
+    position: absolute;
+    right: 10px;
+}
+
+.profile-box img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    transform: translate(10px, 0px);
+   
+}
+
+.companyName{
+    transform: translate(0px, 4px);
+    padding-right: 5px;
+}
+.companyProfile{transform: translate(6px, 3px);}
+
+/* sidebar profile box styling */
+
+.profile-sb-img img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    margin: 10px 10px;
+}
+
+.profile-sb-text p {
+    font-weight: 400;
+    font-size: 12px;
+    /* transform: translate(5px, 13px); */
+    position: relative;
+    top: 13px;
+}
+
+.profile-sb-text span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.sb-person-check{
+        position: relative;
+        top: 12px;
+        left: 69px;
+}
+
+.sb-tab-icon i{
+    color: white;
+}
+
+.sb-tab-name p {
+    color: white;
+}
+
+
+
+.sb-wrapper{
+    background: rgb(23,24,41) !important;
+    height: 100vh;
+}
+
+
+
+.sb-row{
+    position: relative;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    gap: 30px;
+}
+.sb-tab-accordian{
+    left: 30px;
+    position: inherit;
+}
+
+.sb-tab-accordian {
+    color: white;
+}
+
+.tab-card-container{
+        width: 12px;
+}
+.tab-cards{
+    background: rgb(23,24,41) !important;
+    right: 140px;
+    width: 150px;
+    border:none !important;
+    border-left: 2px dotted blue !important;
+    padding: 2px 12px !important;
+}
+
+
+.tab-links .link {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(138, 147, 170);
+    margin-left: -10px;
+
+}
+
+.tab-links .link:hover {
+    position:relative;
+    left: 1px;
+   
+}
+#panel{
+    border-top: 1px solid #e8e8e8;
+}
+
+.profile-sb-box{
+    width: 123%;
+    display: flex;
+    z-index: 9999;
+}
+
+.profile-sb-card{
+    width: 103px;
+}
+
+.tab-width-align{
+    width: 87px;
+}
+
+
+/* dashboard styling starts from here */
+
+/* .db-wrapper{
+    background-color: red;
+    height: 100vh;
+} */
+.panel-content{
+    height: 100vh;
+    background-color: rgb(242,245,250);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.db-card-body{
+    background-color: white;
+}
+
+.card-row {
+    display: flex;
+    gap: 30px;
+    margin-left: 8%;
+    margin-top: 20px;
+}
+
+
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+    box-shadow: 2px 2px 3px 1px rgb(204, 203, 203);
+    height: 130px;
+    border-radius: 10px;
+    border-bottom-left-radius: 30px;
+    width: 250px;
+    overflow: hidden;
+    background:rgb(22 78 99);
+    font-family:"Lexend", sans-serif;
+}
+
+.db-card-header{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-icon{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+.card-icon i{
+    font-size: 30px;
+    color: white;
+}
+
+.today-followUps {
+    margin-top: 7px;
+    display: block;
+    text-align: center;
+}
+
+.today-followUps p {
+    font-size: 17px;
+    color: white;
+}
+
+.db-card-numbs { 
+    display: block;
+    text-align: center;
+}
+.db-card-numbs p {
+    position: relative;
+    bottom: 12px;
+    font-size:22px;
+    color: white;
+}
+
+
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0.2vmin;
+  height: 0.2vmin;
+  border-radius: 50%;
+  color: transparent;
+}
+
+html::before {
+  box-shadow: 93vw 63vh 0.1vmin rgba(255,255,255,0.8),
+              3vw 17vh 0.1vmin rgba(255,255,255,0.8),
+              28vw 85vh 0.1vmin rgba(255,255,255,0.8),
+              97vw 82vh 0.1vmin rgba(255,255,255,0.8),
+              55vw 83vh 0.1vmin rgba(255,255,255,0.8),
+              74vw 72vh 0.1vmin rgba(255,255,255,0.8),
+              84vw 11vh 0.1vmin rgba(255,255,255,0.8),
+              32vw 6vh 0.1vmin rgba(255,255,255,0.8),
+              45vw 92vh 0.1vmin rgba(255,255,255,0.8),
+              98vw 57vh 0.1vmin rgba(255,255,255,0.8),
+              63vw 98vh 0.1vmin rgba(255,255,255,0.8),
+              90vw 46vh 0.1vmin rgba(255,255,255,0.8),
+              50vw 86vh 0.1vmin rgba(255,255,255,0.8),
+              38vw 21vh 0.1vmin rgba(255,255,255,0.8),
+              74vw 2vh 0.1vmin rgba(255,255,255,0.8),
+              89vw 22vh 0.1vmin rgba(255,255,255,0.8),
+              39vw 0vh 0.1vmin rgba(255,255,255,0.8),
+              25vw 89vh 0.1vmin rgba(255,255,255,0.8),
+              54vw 58vh 0.1vmin rgba(255,255,255,0.8),
+              81vw 39vh 0.1vmin rgba(255,255,255,0.8),
+              51vw 8vh 0.1vmin rgba(255,255,255,0.8),
+              24vw 56vh 0.1vmin rgba(255,255,255,0.8),
+              50vw 23vh 0.1vmin rgba(255,255,255,0.8),
+              62vw 34vh 0.1vmin rgba(255,255,255,0.8),
+              10vw 77vh 0.1vmin rgba(255,255,255,0.8),
+              92vw 45vh 0.1vmin rgba(255,255,255,0.8),
+              70vw 40vh 0.1vmin rgba(255,255,255,0.8),
+              2vw 53vh 0.1vmin rgba(255,255,255,0.8),
+              3vw 54vh 0.1vmin rgba(255,255,255,0.8),
+              18vw 21vh 0.1vmin rgba(255,255,255,0.8),
+              48vw 47vh 0.1vmin rgba(255,255,255,0.8),
+              83vw 96vh 0.1vmin rgba(255,255,255,0.8),
+              26vw 32vh 0.1vmin rgba(255,255,255,0.8),
+              46vw 9vh 0.1vmin rgba(255,255,255,0.8),
+              2vw 13vh 0.1vmin rgba(255,255,255,0.8),
+              29vw 63vh 0.1vmin rgba(255,255,255,0.8),
+              17vw 90vh 0.1vmin rgba(255,255,255,0.8),
+              78vw 9vh 0.1vmin rgba(255,255,255,0.8),
+              15vw 39vh 0.1vmin rgba(255,255,255,0.8),
+              90vw 5vh 0.1vmin rgba(255,255,255,0.8);
+}
+
+html::after { 
+  box-shadow: 67vw 35vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              89vw 13vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              77vw 62vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              1vw 74vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              38vw 15vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              79vw 10vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              16vw 47vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              74vw 71vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              30vw 96vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              13vw 98vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              9vw 40vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              9vw 71vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              12vw 93vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              91vw 26vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              73vw 48vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              61vw 46vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              20vw 3vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              90vw 59vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              48vw 72vh 0.1vmin 0.1vmin rgba(255,200,200,0.8),
+              91vw 68vh 0.1vmin 0.1vmin rgba(255,200,200,0.8);
+}
+
+body::before {
+  box-shadow: 30vw 90vh 0.1vmin rgba(190,200,255,0.9),
+              93vw 64vh 0.1vmin rgba(190,200,255,0.9),
+              75vw 80vh 0.1vmin rgba(190,200,255,0.9),
+              37vw 24vh 0.1vmin rgba(190,200,255,0.9),
+              83vw 58vh 0.1vmin rgba(190,200,255,0.9),
+              12vw 36vh 0.1vmin rgba(190,200,255,0.9),
+              62vw 82vh 0.1vmin rgba(190,200,255,0.9),
+              87vw 91vh 0.1vmin rgba(190,200,255,0.9),
+              9vw 2vh 0.1vmin rgba(190,200,255,0.9),
+              99vw 46vh 0.1vmin rgba(190,200,255,0.9),
+              39vw 86vh 0.1vmin rgba(190,200,255,0.9),
+              48vw 96vh 0.1vmin rgba(190,200,255,0.9),
+              1vw 95vh 0.1vmin rgba(190,200,255,0.9),
+              68vw 28vh 0.1vmin rgba(190,200,255,0.9),
+              77vw 12vh 0.1vmin rgba(190,200,255,0.9),
+              10vw 44vh 0.1vmin rgba(190,200,255,0.9),
+              69vw 48vh 0.1vmin rgba(190,200,255,0.9),
+              82vw 96vh 0.1vmin rgba(190,200,255,0.9),
+              49vw 79vh 0.1vmin rgba(190,200,255,0.9),
+              26vw 10vh 0.1vmin rgba(190,200,255,0.9);
+}
+
+body::after {
+  box-shadow: 78vw 25vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              22vw 5vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              4vw 2vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              20vw 91vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              59vw 85vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              95vw 26vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              68vw 92vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              26vw 14vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              45vw 61vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              99vw 52vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              85vw 1vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              91vw 36vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              85vw 48vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              2vw 77vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              43vw 14vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              69vw 25vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              60vw 5vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              30vw 30vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              58vw 51vh 0.1vmin 0.1vmin rgba(255,255,150,0.9),
+              23vw 43vh 0.1vmin 0.1vmin rgba(255,255,150,0.9);
+}
+
+.follow-up-list{
+    background: white;
+    border: 2px solid #d8d8d8;
+    border-radius: 10px;
+    margin-top: 47px !important;
+    position: relative;
+    right: 60px;
+}
+
+.badge{
+    color: black !important;
+}
+
+.follow-btn{
+    margin: 2px;
+}
+
+.followup-filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.follow-up-filter-box{
+    margin-top: 17px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.filter-card{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    box-shadow: 1px 1px 7px -2px #989898;
+    background-color: #f9f9f9;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.follow-up-filter-option ul{
+    padding: 10px !important;
+ }
+
+.follow-up-filter-option ul li{
+   list-style-type: none;
+}
+
+.follow-up-filter-option .customData{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family:"Lexend", sans-serif;
+}
+
+
+/* admin components styling starts from here */
+
+.client-category-row{
+    overflow-x: hidden;
+    position: relative;
+    left: 7%;
+    top: 10px;
+}
+.client-category-container{
+ 
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.client-category-container form {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.client-category-view .category-view{
+    border: 2px solid yellow;
+    height: 200px;
+    width: 200px;
+}
+
+.category-heading{
+    padding: 10px 20px 0px;
+}
+
+.category-heading h4{
+   font-size: 20px !important;
+   font-weight: 700;
+   font-family:"Lexend", sans-serif;
+}
+
+.clientViewProfile{
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+}
