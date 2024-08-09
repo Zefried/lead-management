@@ -351,8 +351,8 @@ class ComposerStaticInit7729d37faf956a8ee1e5f0759c112a00
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -542,12 +542,20 @@ class ComposerStaticInit7729d37faf956a8ee1e5f0759c112a00
     );
 
     public static $classMap = array (
+        'App\\Helpers\\ExchangeTokenHelper' => __DIR__ . '/../..' . '/app/Helpers/ExchangeTokenHelper.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
+        'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
+        'App\\Http\\Controllers\\ClientController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\GoogleEventController' => __DIR__ . '/../..' . '/app/Http/Controllers/GoogleEventController.php',
+        'App\\Http\\Controllers\\adminFollowUpController' => __DIR__ . '/../..' . '/app/Http/Controllers/adminFollowUpController.php',
+        'App\\Http\\Controllers\\statusMasterController' => __DIR__ . '/../..' . '/app/Http/Controllers/statusMasterController.php',
         'App\\Interfaces\\SocialAuthContract' => __DIR__ . '/../..' . '/app/Interfaces/SocialAuthContract.php',
+        'App\\Models\\AddClient' => __DIR__ . '/../..' . '/app/Models/AddClient.php',
+        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\GoogleAuthUser' => __DIR__ . '/../..' . '/app/Models/GoogleAuthUser.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\statusMaster' => __DIR__ . '/../..' . '/app/Models/statusMaster.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Services\\GoogleAuthService' => __DIR__ . '/../..' . '/app/Services/GoogleAuthService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

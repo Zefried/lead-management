@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\adminFollowUpController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\GoogleEventController;
+use App\Http\Controllers\statusMasterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +35,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-    // handling category creation for and delete for admin
+    // Handling category crud starts from here
     Route::post('admin/add-category', [CategoryController::class, 'addCategory'])->name('addCategory');
     Route::get('admin/view-category', [CategoryController::class, 'viewCategory'])->name('viewCategory');
     Route::get('admin/edit-category/{id}', [CategoryController::class, 'editCategory'])->name('editCategory');
@@ -42,21 +44,29 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // category handling ends here 
 
 
-     // handling category creation for and delete for admin
+     // handling client curd starts from here
      Route::post('admin/add-client', [ClientController::class, 'addClient'])->name('addClient');
      Route::get('admin/view-client', [ClientController::class, 'ViewClient'])->name('viewClient');
      Route::get('admin/edit-client/{id}', [ClientController::class, 'editClient'])->name('editClient');
      Route::post('admin/update-client/{id}', [ClientController::class, 'updateClient'])->name('updateClient');
      Route::get('admin/delete-client/{id}', [ClientController::class, 'deleteClient'])->name('deleteClient');
-    
-     // category handling ends here 
+     // handling client ends here 
+
+    // handling client curd starts from here
+     Route::post('admin/add-status', [statusMasterController::class, 'addStatus'])->name('addStatus');
+     Route::get('admin/view-status', [statusMasterController::class, 'viewStatus'])->name('viewStatus');
+     Route::get('admin/edit-status/{id}', [statusMasterController::class, 'editStatus'])->name('editStatus');
+     Route::post('admin/update-status/{id}', [statusMasterController::class, 'updateStatus'])->name('updateStatus');
+     Route::get('admin/delete-status/{id}', [statusMasterController::class, 'deleteStatus'])->name('deleteStatus');
+    // handling client ends here 
 
 
+     // handling admin event creation, starts from here
+     Route::post('admin/add-followup', [adminFollowUpController::class, 'addFollowup'])->name('addFollowup');
+     Route::get('admin/callOne', [adminFollowUpController::class, 'callOne'])->name('callOne');
+   
+    // Admin event creation ends here
 
-
-
-    Route::post('create-event', [GoogleEventController::class, 'eventCrud'])->name('eventCrud');
-
-
+    // Route::post('create-event', [GoogleEventController::class, 'eventCrud'])->name('eventCrud');
 
 });

@@ -28,6 +28,9 @@ export const AddClients = () => {
       });
 
     const [clientRetrievedData, setClientRetrievedData] = useState(); 
+    const [statusData, setStatusMaster] = useState(); 
+
+    console.log(statusData);
 
     useEffect(()=>{
         setLoading(true);
@@ -76,6 +79,32 @@ export const AddClients = () => {
         });
 
     },[reloader])
+
+    
+    // useEffect for clientDataRetrieval
+    useEffect(()=>{
+
+        axios.get('sanctum/csrf-cookie')
+        .then(response => {
+            axios.get('api/admin/view-status', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+            .then((res) => {
+                setStatusMaster(res.data.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error retrieving status master data:', error);
+            });
+        })
+        .catch((error) => {
+            console.error('Error getting CSRF token:', error);
+        });
+
+    },[reloader])
+
 
     function reloadEffect () {
         setLoading(false);
@@ -183,7 +212,6 @@ export const AddClients = () => {
     console.log(clientRetrievedData);
 
     let loadingJsx = '';
-
     if(loading){
         return loadingJsx = (
             <div>
@@ -192,8 +220,8 @@ export const AddClients = () => {
         ) 
     }
 
-    let selectCategory = '';
-    
+
+    let selectCategory = ''; 
     if(categoryData){
         selectCategory = categoryData.map((prevData)=>{
             return (               
@@ -203,13 +231,11 @@ export const AddClients = () => {
     }   
     
     let viewData = '';
-    
     if(clientRetrievedData){
-
         viewData = clientRetrievedData.map((items, i) => {
             return (
                 <tr key={items.id}>
-                    <td>{i}</td>
+                    <td>{i+1}</td>
                     <td>
                         <img className='clientViewProfile' src='https://m.media-amazon.com/images/M/MV5BZTZjNjUyN2QtNWZlNC00ODYyLTg2YjctNjQwNzFhNDk5ODgzXkEyXkFqcGdeQXVyNzUyODA1NDk@._V1_QL75_UX820_.jpg' alt='profileImg' />
                     </td>
@@ -217,11 +243,25 @@ export const AddClients = () => {
                     <td>{items.business_name}</td>
                     <td>{items.phone}</td>
                     <td>{items.location}</td>
+                    <td className='dynamicStatus' style={{width:'140px'}}>
+                        <select className="form-select dynamicStatusSelect" >
+                            {                   
+                                statusData && statusData.map((status) => (
+                                    <option key={status.id} value={status.status_name}>
+                                        {status.status_name}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                    </td>
                     <td>
                         <Link to={`/admin/edit-clients/${items.id}`} className='btn btn-sm btn-outline-primary'>Edit</Link>
                     </td>
                     <td>
                         <Link className='btn btn-sm btn-outline-danger' onClick={()=>handleDelete(items.id)}>Delete</Link>
+                    </td>
+                    <td>
+                        <Link to={`/admin/add-followup/${items.id}`} className='btn btn-sm btn-outline-success' >Follow-Up</Link>
                     </td>
                 </tr>
             )
@@ -317,8 +357,10 @@ export const AddClients = () => {
                                                 <th scope="col">Business</th>
                                                 <th scope="col">Number</th>
                                                 <th scope="col">Location</th>
+                                                <th scope="col">Status</th>
                                                 <th scope="col">Edit</th>
                                                 <th scope="col">Delete</th>
+                                                <th scope='col'>Set Reminder</th>
                                             </tr>
                                         </thead>
                                         <tbody>

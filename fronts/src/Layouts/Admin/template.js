@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './adminStyle.css';
 import { adminHelper } from '../../util/js/adminPanel.js';
 import { Link, Outlet } from 'react-router-dom';
-import { Dashboard } from './dashboard.js';
+
 
 
 
@@ -108,7 +108,7 @@ export const Template = () => {
 
                         <div className='profile-sb-box'>
                             <div className='profile-sb-img'>
-                                <img src='https://rb.gy/n865th' />
+                                <img src='https://rb.gy/n865th' alt='img' />
                             </div>
                             <div className='profile-sb-text'>
                                 <p>Web Infotech</p>
@@ -126,7 +126,7 @@ export const Template = () => {
                                 </div>
 
                                 <div className='sb-tab-name'>
-                                    <p>Dashboard</p>
+                                    <Link to={'/admin/dashboard'} className='link-info dashboard-link'> <p>Dashboard</p></Link> 
                                 </div>
 
                                 <div className='sb-tab-accordian'>
@@ -159,7 +159,7 @@ export const Template = () => {
                                 </div>
 
                                 <div className='sb-tab-name'>
-                                    <p className='tab-width-align' >My Clients</p>
+                                    <p className='tab-width-align'>My Clients</p>
                                 </div>
 
                                 <div className='sb-tab-accordian'>
@@ -175,11 +175,45 @@ export const Template = () => {
                                                 <Link className='link' to={'/admin/add-category'}><i class="bi bi-dash-lg"></i>Add Category</Link>
                                             </div>
                                             <div className='tab-links'>
-                                                <Link className='link' to={'/admin/add-clients'}><i class="bi bi-dash-lg"></i>Add Clients</Link>
+                                                <Link className='link' to={'/admin/add-clients'}><i class="bi bi-dash-lg"></i>All Clients</Link>
                                             </div>  
+                                                                                        
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='sb-row'>
+                                <div className='sb-tab-icon'>
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+
+                                <div className='sb-tab-name'>
+                                    <p className='tab-width-align' >Follow-ups</p>
+                                </div>
+
+                                <div className='sb-tab-accordian'>
+                                    <div className='compact-down'>
+                                        <i className="bi bi-chevron-compact-down" data-bs-toggle="collapse" data-bs-target="#collapseContentThree" aria-expanded="false" aria-controls="collapseContentTwo">
+                                        </i> 
+                                    </div>
+                                   
+                                      
+                                    <div class="collapse" id="collapseContentThree">
+                                        <div class="card card-body tab-cards final-sb-tab" id="tab-cardOne">
                                             <div className='tab-links'>
-                                                <Link className='link'><i class="bi bi-dash-lg"></i>View Clients</Link>
-                                            </div>                                                 
+                                                <Link className='link' to={'/admin/add-status'}><i class="bi bi-dash-lg"></i>Create Status</Link>
+                                            </div>
+                                            <div className='tab-links'>
+                                                <Link className='link' to={'/admin/add-status'}><i class="bi bi-dash-lg"></i>View Follow-up</Link>
+                                            </div>
+                                            <div className='tab-links'>
+                                                <Link className='link' to={'/admin/add-category'}><i class="bi bi-dash-lg"></i>Today's Follow-up</Link>
+                                            </div>
+                                            <div className='tab-links'>
+                                                <Link className='link' to={'/admin/add-clients'}><i class="bi bi-dash-lg"></i>Initiated</Link>
+                                            </div>  
+                                                                                        
                                         </div> 
                                     </div>
                                 </div>

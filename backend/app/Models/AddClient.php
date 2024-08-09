@@ -22,4 +22,9 @@ class AddClient extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function followUps()
+    {
+        return $this->hasMany(FollowUpList::class);
+    }
 }

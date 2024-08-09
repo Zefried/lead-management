@@ -36,7 +36,7 @@ export const EditClients = () => {
         }).catch((error)=>{
             console.log(error + 'error on getting csrf token');
         });
-    },['aaa'])
+    },[]);
 
     
     let selectedCategoryName = '';

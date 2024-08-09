@@ -33,7 +33,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2dEZsXtx8IYmANZO',
+            '_route' => 'generated::waTvhnbMLzbjAQ1S',
           ),
           1 => NULL,
           2 => 
@@ -53,7 +53,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::MxAIJLLUqZRIvaSY',
+            '_route' => 'generated::5VKhhrTUyzPx3Vhu',
           ),
           1 => NULL,
           2 => 
@@ -165,18 +165,77 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/api/create-event' => 
+      '/api/admin/add-status' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'eventCrud',
+            '_route' => 'addStatus',
           ),
           1 => NULL,
           2 => 
           array (
             'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/api/admin/view-status' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'viewStatus',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/api/admin/add-followup' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'addFollowup',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/api/admin/callOne' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'callOne',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -190,7 +249,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Z50oa7U1noI9F6ek',
+            '_route' => 'generated::o7dFCqJ19a3lz72b',
           ),
           1 => NULL,
           2 => 
@@ -210,7 +269,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::1fPv0kp6Was3OwrZ',
+            '_route' => 'generated::sY8z3weaMszDy4yt',
           ),
           1 => NULL,
           2 => 
@@ -227,7 +286,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/api/a(?|uth/([^/]++)/callback(*:37)|dmin/(?|edit\\-c(?|ategory/([^/]++)(*:78)|lient/([^/]++)(*:99))|update\\-c(?|ategory/([^/]++)(*:135)|lient/([^/]++)(*:157))|delete\\-c(?|ategory/([^/]++)(*:194)|lient/([^/]++)(*:216)))))/?$}sDu',
+      0 => '{^(?|/api/a(?|uth/([^/]++)/callback(*:37)|dmin/(?|edit\\-(?|c(?|ategory/([^/]++)(*:81)|lient/([^/]++)(*:102))|status/([^/]++)(*:126))|update\\-(?|c(?|ategory/([^/]++)(*:166)|lient/([^/]++)(*:188))|status/([^/]++)(*:212))|delete\\-(?|c(?|ategory/([^/]++)(*:252)|lient/([^/]++)(*:274))|status/([^/]++)(*:298)))))/?$}sDu',
     ),
     3 => 
     array (
@@ -237,7 +296,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Amy9iXc2hEi068gm',
+            '_route' => 'generated::Q7HeMVpnEewZOPzh',
           ),
           1 => 
           array (
@@ -254,7 +313,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      78 => 
+      81 => 
       array (
         0 => 
         array (
@@ -277,7 +336,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      99 => 
+      102 => 
       array (
         0 => 
         array (
@@ -300,7 +359,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      135 => 
+      126 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'editStatus',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      166 => 
       array (
         0 => 
         array (
@@ -322,7 +404,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      157 => 
+      188 => 
       array (
         0 => 
         array (
@@ -344,7 +426,29 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      194 => 
+      212 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'updateStatus',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      252 => 
       array (
         0 => 
         array (
@@ -367,13 +471,36 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      216 => 
+      274 => 
       array (
         0 => 
         array (
           0 => 
           array (
             '_route' => 'deleteClient',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      298 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'deleteStatus',
           ),
           1 => 
           array (
@@ -442,7 +569,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2dEZsXtx8IYmANZO' => 
+    'generated::waTvhnbMLzbjAQ1S' => 
     array (
       'methods' => 
       array (
@@ -459,13 +586,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004b10000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004b00000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::2dEZsXtx8IYmANZO',
+        'as' => 'generated::waTvhnbMLzbjAQ1S',
       ),
       'fallback' => false,
       'defaults' => 
@@ -481,7 +608,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::MxAIJLLUqZRIvaSY' => 
+    'generated::5VKhhrTUyzPx3Vhu' => 
     array (
       'methods' => 
       array (
@@ -502,7 +629,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::MxAIJLLUqZRIvaSY',
+        'as' => 'generated::5VKhhrTUyzPx3Vhu',
       ),
       'fallback' => false,
       'defaults' => 
@@ -518,7 +645,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Amy9iXc2hEi068gm' => 
+    'generated::Q7HeMVpnEewZOPzh' => 
     array (
       'methods' => 
       array (
@@ -539,7 +666,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Amy9iXc2hEi068gm',
+        'as' => 'generated::Q7HeMVpnEewZOPzh',
       ),
       'fallback' => false,
       'defaults' => 
@@ -969,13 +1096,13 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'eventCrud' => 
+    'addStatus' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'api/create-event',
+      'uri' => 'api/admin/add-status',
       'action' => 
       array (
         'middleware' => 
@@ -983,14 +1110,14 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:sanctum',
         ),
-        'uses' => 'App\\Http\\Controllers\\GoogleEventController@eventCrud',
-        'controller' => 'App\\Http\\Controllers\\GoogleEventController@eventCrud',
+        'uses' => 'App\\Http\\Controllers\\statusMasterController@addStatus',
+        'controller' => 'App\\Http\\Controllers\\statusMasterController@addStatus',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'eventCrud',
+        'as' => 'addStatus',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1006,7 +1133,233 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Z50oa7U1noI9F6ek' => 
+    'viewStatus' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/admin/view-status',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\statusMasterController@viewStatus',
+        'controller' => 'App\\Http\\Controllers\\statusMasterController@viewStatus',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'viewStatus',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'editStatus' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/admin/edit-status/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\statusMasterController@editStatus',
+        'controller' => 'App\\Http\\Controllers\\statusMasterController@editStatus',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'editStatus',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'updateStatus' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'api/admin/update-status/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\statusMasterController@updateStatus',
+        'controller' => 'App\\Http\\Controllers\\statusMasterController@updateStatus',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'updateStatus',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'deleteStatus' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/admin/delete-status/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\statusMasterController@deleteStatus',
+        'controller' => 'App\\Http\\Controllers\\statusMasterController@deleteStatus',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'deleteStatus',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'addFollowup' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'api/admin/add-followup',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\adminFollowUpController@addFollowup',
+        'controller' => 'App\\Http\\Controllers\\adminFollowUpController@addFollowup',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'addFollowup',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'callOne' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/admin/callOne',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'auth:sanctum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\adminFollowUpController@callOne',
+        'controller' => 'App\\Http\\Controllers\\adminFollowUpController@callOne',
+        'namespace' => NULL,
+        'prefix' => 'api',
+        'where' => 
+        array (
+        ),
+        'as' => 'callOne',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::o7dFCqJ19a3lz72b' => 
     array (
       'methods' => 
       array (
@@ -1024,8 +1377,8 @@ app('router')->setCompiledRoutes(
                     \\Illuminate\\Support\\Facades\\Event::dispatch(new \\Illuminate\\Foundation\\Events\\DiagnosingHealth);
 
                     return \\Illuminate\\Support\\Facades\\View::file(\'D:\\\\portfolio\\\\followUp\\\\backend\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\');
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004b50000000000000000";}}',
-        'as' => 'generated::Z50oa7U1noI9F6ek',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004b40000000000000000";}}',
+        'as' => 'generated::o7dFCqJ19a3lz72b',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1041,7 +1394,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::1fPv0kp6Was3OwrZ' => 
+    'generated::sY8z3weaMszDy4yt' => 
     array (
       'methods' => 
       array (
@@ -1057,13 +1410,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c40000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c90000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::1fPv0kp6Was3OwrZ',
+        'as' => 'generated::sY8z3weaMszDy4yt',
       ),
       'fallback' => false,
       'defaults' => 

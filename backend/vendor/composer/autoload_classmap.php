@@ -6,12 +6,20 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Helpers\\ExchangeTokenHelper' => $baseDir . '/app/Helpers/ExchangeTokenHelper.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
+    'App\\Http\\Controllers\\CategoryController' => $baseDir . '/app/Http/Controllers/CategoryController.php',
+    'App\\Http\\Controllers\\ClientController' => $baseDir . '/app/Http/Controllers/ClientController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\GoogleEventController' => $baseDir . '/app/Http/Controllers/GoogleEventController.php',
+    'App\\Http\\Controllers\\adminFollowUpController' => $baseDir . '/app/Http/Controllers/adminFollowUpController.php',
+    'App\\Http\\Controllers\\statusMasterController' => $baseDir . '/app/Http/Controllers/statusMasterController.php',
     'App\\Interfaces\\SocialAuthContract' => $baseDir . '/app/Interfaces/SocialAuthContract.php',
+    'App\\Models\\AddClient' => $baseDir . '/app/Models/AddClient.php',
+    'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
     'App\\Models\\GoogleAuthUser' => $baseDir . '/app/Models/GoogleAuthUser.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\statusMaster' => $baseDir . '/app/Models/statusMaster.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Services\\GoogleAuthService' => $baseDir . '/app/Services/GoogleAuthService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

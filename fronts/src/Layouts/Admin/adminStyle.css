@@ -547,3 +547,32 @@ body::after {
     width: 35px;
     border-radius: 50px;
 }
+
+/* components > admin > status master > dynamic status option styling */
+
+.dynamicStatusSelect{
+    border-style: none !important;
+    position: relative;
+    right: 13%;
+}
+
+.followup-card-wrapper{
+    background-color: rgb(23,24,41) !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 4px 0px;
+}
+
+.followup-card, .fu-text{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 12px !important;
+    font-style: normal;
+    padding:0px 10px 0px 10px;
+    color: white !important;
+}
+
+.dashboard-link{
+    text-decoration: none !important;
+}
