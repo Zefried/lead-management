@@ -205,7 +205,7 @@ export const Template = () => {
                                                 <Link className='link' to={'/admin/add-status'}><i class="bi bi-dash-lg"></i>Create Status</Link>
                                             </div>
                                             <div className='tab-links'>
-                                                <Link className='link' to={'/admin/add-status'}><i class="bi bi-dash-lg"></i>View Follow-up</Link>
+                                                <Link className='link' to={'/admin/view-followup'}><i class="bi bi-dash-lg"></i>View Follow-up</Link>
                                             </div>
                                             <div className='tab-links'>
                                                 <Link className='link' to={'/admin/add-category'}><i class="bi bi-dash-lg"></i>Today's Follow-up</Link>

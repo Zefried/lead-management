@@ -63,9 +63,13 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
      // handling admin event creation, starts from here
      Route::post('admin/add-followup', [adminFollowUpController::class, 'addFollowup'])->name('addFollowup');
-     Route::get('admin/callOne', [adminFollowUpController::class, 'callOne'])->name('callOne');
-   
-    // Admin event creation ends here
+     Route::get('admin/view-followup', [adminFollowUpController::class, 'viewFollowUp'])->name('viewFollowUp');
+     Route::get('admin/edit-followups/{id}', [adminFollowUpController::class, 'editFollowup'])->name('editFollowup');
+     Route::post('admin/update-followups/{id}', [adminFollowUpController::class, 'updateFollowup'])->name('updateFollowup');
+     Route::get('admin/delete-followups/{id}', [adminFollowUpController::class, 'deleteFollowup'])->name('deleteFollowup');
+     Route::get('admin/fetch-status-master', [adminFollowUpController::class, 'fetchStatusMaster'])->name('fetchStatusMaster');
+     Route::post('admin/update-followup-status', [adminFollowUpController::class, 'updateFollowupStatus'])->name('updateFollowupStatus');
+     // Admin event creation ends here
 
     // Route::post('create-event', [GoogleEventController::class, 'eventCrud'])->name('eventCrud');
 

@@ -13,6 +13,8 @@ import { EditClients } from './components/admin/clients/edit-clients';
 import { StatusMaster } from './components/admin/status master/statusMaster';
 import { EditStatusMaster } from './components/admin/status master/edit-status';
 import { AddFollowUp } from './components/admin/followUp/addFollowUp';
+import { ViewFollowUp } from './components/admin/followUp/viewFollowUp';
+import { EditFollowUp } from './components/admin/followUp/editFollowUp';
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
 
             {/* followUp routes starts here  */}
             <Route path='add-followup/:id' element={<AddFollowUp/>}/>
+            <Route path='view-followup' element={<ViewFollowUp/>}/>
+            <Route path='edit-followup/:id' element={<EditFollowUp/>}/>
        
             {/* followup routes ends routes ends here  */}
 

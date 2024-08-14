@@ -25,6 +25,6 @@ class AddClient extends Model
 
     public function followUps()
     {
-        return $this->hasMany(FollowUpList::class);
+        return $this->hasMany(FollowUpList::class, 'client_id');
     }
 }

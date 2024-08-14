@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {Link, useParams} from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2';
 
 export const AddFollowUp = () => {
 
+    const navigate = useNavigate();
     const userData = JSON.parse(localStorage.getItem('auth_user'));
     const token = userData.token;
     const email = userData.email;
@@ -24,12 +26,15 @@ export const AddFollowUp = () => {
     const [event, setEvent] = useState({
         title:'',
         start: '',
-        end: '',
-        description: '',
-        location:'',
+        description: '', 
     });
    
-    console.log(event);
+    const postData = {event:event, id:id, email:email}
+
+    const [serverStatus, setServerStatus] = useState({
+        error:[],
+        data:[],
+    })
     
     function minDate() {
         let now = new Date();
@@ -67,24 +72,58 @@ export const AddFollowUp = () => {
     },[]);
 
     const handleChange = (e) => {
-
+        // logic is when name is start, it updates both start and end but if not still updating other data on state
         const { name, value } = e.target;
-        setEvent({ ...event, [name]: value });
+        if (name === 'start') {
+            setEvent({ ...event, [name]: value, end: value });
+        } else {
+            setEvent({ ...event, [name]: value });
+        }
+            
     };
-    
+
+
+    console.log(event);
+
+
     const handleSubmit = (e) => {
         setLoading(true);
         
         e.preventDefault();
         
         axios.get('sanctum/csrf-cookie').then(response => {
-            axios.post('api/admin/add-followup', event, {
+            axios.post('api/admin/add-followup', postData, {
                 headers:{
                     authorization: `Bearer ${token}`
                 }
             }).then((res)=>{
-                console.log(res.data.original.id);
-                setLoading(false);
+
+                if(res.data.original.status === 201){
+
+                    setServerStatus((prevState) => ({
+                        ...prevState, // Spread the previous state
+                        data: res.data.original?.item || [], // Update the data field
+                        error: res.data.error || prevState.error, // Update error if available, otherwise keep previous
+                    })); 
+
+                    Swal.fire({
+                        title: "Successful",
+                        text: res.data.original.messages,
+                        icon: "success"
+                    });
+
+                    navigate('/admin/view-followup')
+                    setLoading(false);
+                } else if(res.data.status === 401){
+                    Swal.fire({
+                        title: "Failed",
+                        text: res.data.messages,
+                        icon: "Warning"
+                    });
+
+                }
+
+             
             }).catch((error)=>{
                 setLoading(false);
                 console.log(error + 'error on storing category data')
@@ -96,7 +135,10 @@ export const AddFollowUp = () => {
 
     }
 
-    
+    if(serverStatus){
+        console.log(serverStatus);
+    }
+
 
     let loadingJsx = '';
         if(loading){
@@ -136,30 +178,26 @@ export const AddFollowUp = () => {
                     <div className="m-3 col-lg-4">
                         <label>Event Title</label>
                         <input className="form-control" type="text" name="title" value={event.title} onChange={handleChange}/>
+                        <span>{serverStatus.error ? serverStatus.error.title : ''}</span>
                     </div>
 
                     <div className="m-3 col-lg-4">
                         <label>Start:</label>
                         <input className="form-control" type="datetime-local" name="start" value={event.start}  min={minDate()}  onChange={handleChange}/>
+                        <span>{serverStatus.error ? serverStatus.error.start : ''}</span>
                     </div>
-                    <div className="m-3 col-lg-4"> 
-                        <label>End:</label>
-                        <input  className="form-control" type="datetime-local" name="end" value={event.end} min={minDate()} onChange={handleChange}/>
-                    </div>
+
+                    
                     <div className="m-3 col-lg-4">
                         <label>Remarks:</label>
                         <textarea  className="form-control" name="description" value={event.description} onChange={handleChange}/>
+                        <span>{serverStatus.error ? serverStatus.error.description : ''}</span>
                     </div>
 
-                    <div className="m-3 col-lg-4">
-                        <label>Client Location:</label>
-                        <input  className="form-control" type="text" name="location" value={event.location} onChange={handleChange}/>
-                    </div>
                     <button className='m-3 btn btn-md btn-outline-primary' type="submit">Add Event</button>
                 </form>
 
-            </div>
-           
+            </div>        
         );
 
 

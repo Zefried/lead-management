@@ -243,7 +243,7 @@ export const AddClients = () => {
                     <td>{items.business_name}</td>
                     <td>{items.phone}</td>
                     <td>{items.location}</td>
-                    <td className='dynamicStatus' style={{width:'140px'}}>
+                    {/* <td className='dynamicStatus' style={{width:'140px'}}>
                         <select className="form-select dynamicStatusSelect" >
                             {                   
                                 statusData && statusData.map((status) => (
@@ -253,7 +253,7 @@ export const AddClients = () => {
                                 ))
                             }
                         </select>
-                    </td>
+                    </td> */}
                     <td>
                         <Link to={`/admin/edit-clients/${items.id}`} className='btn btn-sm btn-outline-primary'>Edit</Link>
                     </td>
@@ -357,7 +357,7 @@ export const AddClients = () => {
                                                 <th scope="col">Business</th>
                                                 <th scope="col">Number</th>
                                                 <th scope="col">Location</th>
-                                                <th scope="col">Status</th>
+                                                {/* <th scope="col">Status</th> */}
                                                 <th scope="col">Edit</th>
                                                 <th scope="col">Delete</th>
                                                 <th scope='col'>Set Reminder</th>

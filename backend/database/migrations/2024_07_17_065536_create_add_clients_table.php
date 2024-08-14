@@ -13,8 +13,8 @@ return new class extends Migration
     {
         
         Schema::create('add_clients', function (Blueprint $table) {
+            
             $table->id();
-
             $table->unsignedBigInteger('category_id'); // Foreign key column
             $table->string('client_name')->nullable();
             $table->string('business_name')->nullable();

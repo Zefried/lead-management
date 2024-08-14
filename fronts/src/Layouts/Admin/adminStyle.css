@@ -576,3 +576,18 @@ body::after {
 .dashboard-link{
     text-decoration: none !important;
 }
+
+
+.remark-cell {
+    max-height: 90px; /* The cell can grow until it reaches 90px */
+    overflow-y: auto; /* Scroll only when necessary */
+    max-width: 300px;
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #f9f9f9; /* Optional: Add a subtle background color */
+}
+
+.followupTable{
+  overflow-x: auto;
+}
