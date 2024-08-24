@@ -21,7 +21,7 @@ const LoginPage = () => {
   const handleGoogleSignUp = async () => {
     setLoading(true);
 
-    const clientId = '743324467464-ff7fpq7lm3aumi83dv0jt0r5enlqf5b0.apps.googleusercontent.com'; // Your Google Client ID
+    const clientId = '24467464-ff7fpq7lm3aumi83dv0jt0r5enlqf5b0.apps.googleusercontent.com'; // Your Google Client ID
     const redirectUri = encodeURIComponent('http://localhost:8000/api/auth/google/callback'); // Your Google Redirect URI
     const scope = encodeURIComponent('openid email profile https://www.googleapis.com/auth/calendar');
   
